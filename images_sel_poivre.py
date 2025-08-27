@@ -12,7 +12,7 @@ img_bruit= np.array(img2)
 
 # Créer une copie pour y ajouter du bruit poivre et sel
 salt_img = img_np.copy()
-prob = 0.08 # proportion de pixels à altérer
+prob = 0.18 # proportion de pixels à altérer
 
 # Générer une matrice de bruit aléatoire
 rand = np.random.rand(*img_np.shape)
@@ -23,7 +23,7 @@ salt_img[rand < (prob / 2)] = 255
 salt_img[rand > 1 - (prob / 2)] = 0
 
 # Dimensions de la figure
-plt.figure(figsize=(12, 6))
+plt.figure(figsize=(16, 6))
 
 # Sous-graphe 1 : image originale
 plt.subplot(1, 3, 1)
